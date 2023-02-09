@@ -2,9 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/',(req,res)=> {
-    res.send('Welcome azure')
+    res.send('Hello world azure deployment is here')
 })
 
-app.listen(5000, ()=> {
-    console.log('Server is listening at port 5000....')
-})
+app.listen(process.env.PORT || 5000);
